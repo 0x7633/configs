@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # cdpath=(	 )
 
 # PROMPTS
-  export RPROMPT='[%T]'
+  export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
 # export PROMPT='[]'
 #
 # %n - Имя пользователя
@@ -113,7 +113,7 @@ source $ZSH/oh-my-zsh.sh
 # %D - Дата в формате YY-MM-DD
 # %B, %b - Начало и конец выделения жирным
 # %U, %u - Начало и конец подчеркивания
-
+# %(3~|../%2d|%~) - Приглашение с двумя ближайшими каталогами [is.gd/MYaTEK]
 
 # Файл истории
   HISTFILE=~/.zsh_history
