@@ -31,8 +31,6 @@ ZSH_THEME="af-magic"
 plugins=(
   git
   encode64
-#  zsh-autosuggestions
-#  fast-syntax-highlighting
 )
 
 # Plugins that significantly slow down zsh:
