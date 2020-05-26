@@ -141,6 +141,8 @@ export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
 #  setopt CORRECT_ALL
 # Добавлять в историю время выполнения команды  
 #  setopt extended_history
+# Не добавлять в историю время выполнения команды
+  unsetopt extendedhistory
 # "Уравнивать в правах" верхний и нижний регистры
   zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
