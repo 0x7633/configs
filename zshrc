@@ -223,7 +223,7 @@ export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
   }
 
 # Удалить запись из истории команд в zsh
-  hcl(){
+  rm_from_history(){
     if LC_ALL=C sed -i "/$1/d" $HISTFILE
     then
       echo "Удалено"
