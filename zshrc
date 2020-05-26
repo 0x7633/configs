@@ -94,6 +94,7 @@ source $ZSH/oh-my-zsh.sh
   alias -g N='2>/dev/null'
   alias -g NN='>/dev/null 2>&1'
   alias a2="aria2c -c -j 10"
+  alias find.files.sort="find . -maxdepth 1 \( -type l -o -type f \) | sort | awk -F '/' '{print \$NF}'"
 
 # cdpath=(	 )
 
