@@ -148,7 +148,7 @@ export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
 # ФУНКЦИИ
 
 # Распаковка архива
-  ex () {
+  ex(){
    if [ -f $1 ] ; then
      case $1 in
        *.tar.bz2) tar xvjf $1   ;;
@@ -171,7 +171,7 @@ export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
   }
   
 # Упаковка в архив
-  pk () {
+  pk(){
    if [ $1 ] ; then
      case $1 in
        tbz)       tar cjvf $2.tar.bz2 $2      ;;
@@ -189,7 +189,7 @@ export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
   }
 
 # Создать директорию и перейти в нее 
-  mkcd () { mkdir $1 && cd $1 }
+  mkcd(){ mkdir $1 && cd $1 }
 
 # Создать qrcode и показать
   qr(){ qrencode -o - $1 | display }
@@ -223,13 +223,14 @@ export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
   }
 
 # Удалить запись из истории команд в zsh
-  hcl(){ if LC_ALL=C sed -i "/$1/d" $HISTFILE
-  then
-    echo "Удалено"
-  else 
-    echo "При удалении произошла ошибка"
-  fi
- }
+  hcl(){
+    if LC_ALL=C sed -i "/$1/d" $HISTFILE
+    then
+      echo "Удалено"
+    else 
+      echo "При удалении произошла ошибка"
+    fi
+  }
 
 # ping
   pin(){ ping -c $1 ya.ru } 
