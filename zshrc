@@ -241,3 +241,16 @@ export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
   compare_checksums(){
     [[ $1 == $2 ]] && echo "Суммы одинаковые" || echo "Суммы различаются"
   }
+
+# Погода
+  weather(){
+    if [ -z $1 ]
+    then
+        curl https://ru.wttr.in/
+    elif [ $1 = --help ] || [ $1 = help ] || [ $1 = -h ]
+    then
+        curl https://ru.wttr.in/:help
+    else
+        curl https://ru.wttr.in/$1
+    fi
+  }
