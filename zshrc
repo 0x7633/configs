@@ -198,7 +198,7 @@ export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
 
 # Создание паролей
 
-  mkpwgr(){ 
+  mkpasswdgpgr(){ 
    for ((i=1; i<=$1; i++)) ; do
     gpg --gen-random -armor 1 $2 | head -c $2 ; echo
    done
