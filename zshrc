@@ -210,7 +210,7 @@ export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
    done
   }
 
-  mkpwb64(){ 
+  mkpasswdb64(){ 
    for ((i=1; i<=$1; i++)) ; do
      < /dev/urandom tr -dc 'A-Z-a-z-0-9!@#_$%^&*()' | head -c $2 | base64 | head -c $2 ; echo
    done
