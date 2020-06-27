@@ -235,7 +235,7 @@ export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
   }
 
 # ping
-  pin(){ ping -c $1 ya.ru } 
+  ping_(){ ping -c $1 ya.ru } 
 
 # Сравнение контрольных сумм
   compare_checksums(){
