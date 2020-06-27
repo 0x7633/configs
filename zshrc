@@ -204,7 +204,7 @@ export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
    done
   }
 
-  mkpwr(){ 
+  mkpasswdr(){ 
    for ((i=1; i<=$1; i++)) ; do
     < /dev/urandom tr -dc 'A-Za-z0-9!@#_$%&?*()' | head -c $2; echo 
    done
