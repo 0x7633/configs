@@ -99,11 +99,12 @@ source $ZSH/oh-my-zsh.sh
 # cdpath=(	 )
 
 # PROMPTS
+NEWLINE=$'\n'
 export PROMPT='$FG[237]${(l.COLUMNS..-.)}%{$reset_color%}
-$FG[032]%(3~|../%2d|%~)\
-$(git_prompt_info)$(hg_prompt_info) \
+$FG[032]%~\
+$(git_prompt_info)$(hg_prompt_info) ${NEWLINE}\
 $FG[105]%(!.#.»)%{$reset_color%} '
-export RPROMPT='$FG[032]%~ [%T]%{$reset_color%}'
+export RPROMPT=''
 
 # export PROMPT='[]'
 #
